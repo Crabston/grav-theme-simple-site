@@ -26,3 +26,12 @@
 
 	img { padding: 1rem; }
 }
+
+nav.language-switcher {
+	ul{
+		display: flex;
+	}
+	li::marker {
+		content: none;
+	}
+}

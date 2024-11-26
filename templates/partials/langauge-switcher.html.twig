@@ -1,0 +1,64 @@
+{% set format = format ?? config.get('plugins.langswitcher.language_display', 'short') %} {# long, short, icon #}
+{% set display = display ?? config.get('plugins.langswitcher.display', 'dropdown') %} {# inline, dropdown #}
+{% set display = 'dropdown' %}
+
+{% macro lang_switcher(page, display, format) %}
+	{% import _self as macros %}
+
+	{% set lang_url = base_url ~ '/' ~ language %}
+	{% set display_css = '' %}
+	{% if display == 'inline' %}
+		{% set display_css = 'class="lang-switcher-nav lang-inline"' %}
+	{% elseif display == 'dropdown' %}
+		{% set display_css = 'class="lang-switcher-nav lang-dropdown"' %}
+	{% endif %}
+
+
+	{% if display=='dropdown' %}
+	<li><a href="#">Sprache</a><ul>
+	{% endif %}
+		{% for lang in grav.language.languages %}
+			{% set page_url = "/" ~ lang ~ page.route|e %}
+
+			{{ debug(page_url) }}
+
+				<li>
+					<a href="{{ page_url }}" >
+						{{ lang|capitalize }}
+					</a>
+				</li>
+		{% endfor %}
+	{% if display=='dropdown' %}
+	</ul></li>
+	{% endif %}
+
+
+	{# awddawdaw
+	{% for p in page.children.visible %}
+		{% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+
+			<li>
+				<a href="{{ lang_url ~ uri.params ~ (uri.query|length > 1 ? '?' ~ uri.query) }}" class="{{ active_page }}">
+					{% if format = 'long' %}
+						{{ native_name(language)|capitalize }}
+					{% elseif format = 'short' %}
+						{{ language|upper }}
+					{% else %}
+						{% if p.header.icon %}
+							<i class="fa fa-{{ p.header.icon }}"></i>
+						{% endif %}
+						{{ p.menu }}
+					{% endif %}
+				</a>
+			</li>
+
+	{% endfor %}
+	#}
+{% endmacro %}
+
+<nav {{ display=='dropdown' ? 'class="dropmenu animated"' : '' }}>
+	<ul>
+		{% import _self as macros %}
+		{{ macros.lang_switcher(page, display, format) }}
+	</ul>
+</nav>

@@ -280,6 +280,13 @@ section.modular-image-cards .image-cards .image-card h4 {
   padding: 1rem;
 }
 
+nav.language-switcher ul {
+  display: flex;
+}
+nav.language-switcher li::marker {
+  content: none;
+}
+
 * {
   box-sizing: border-box;
 }
