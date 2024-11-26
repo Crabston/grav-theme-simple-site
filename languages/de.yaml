@@ -1,3 +1,8 @@
+LANGUAGE:
+  NAME: Deutsch
+  SLUG: de
+  ICON: 🇩🇪
+
 TEMPLATE:
   DEFAULT:
     BODY_CLASSES:

@@ -3,7 +3,11 @@
 
 {# TODO: remove #}
 {% set display = 'dropdown' %}
-{% set format = 'short' %}
+{% set format = 'icon' %}
+
+{% macro icon(language) %}
+	{{ 'LANGUAGE.ICON'|tl([language]) }}
+{% endmacro %}
 
 {% macro lang_switcher(page, display, format) %}
 	{% import _self as macros %}
@@ -21,10 +25,7 @@
 				{% elseif format == 'short' %}
 					{{ language|upper }}
 				{% elseif format == 'icon' %}
-					{% if p.header.icon %}
-						<i class="fa fa-{{ p.header.icon }}"></i>
-					{% endif %}
-					{{ p.menu }}
+					{{ macros.icon(language) }}
 				{% endif %}
 			</a>
 		</li>
