@@ -28,10 +28,20 @@
 }
 
 nav.language-switcher {
-	ul{
-		display: flex;
+	nav:not(.dropmenu) li {
+		font-size: 16px;
 	}
-	li::marker {
-		content: none;
+
+	ul {
+		display: flex;
+		gap: .5rem
+	}
+
+	li {
+		margin-top: 0;
+
+		&::marker {
+			content: none;
+		}
 	}
 }

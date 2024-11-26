@@ -5,7 +5,11 @@
 {% set display = 'dropdown' %}
 {% set format = 'icon' %}
 
-{% macro icon(language) %}
+{% macro lang_name(language) %}
+	{{ 'LANGUAGE.NAME'|tl([language]) }}
+{% endmacro %}
+
+{% macro lang_icon(language) %}
 	{{ 'LANGUAGE.ICON'|tl([language]) }}
 {% endmacro %}
 
@@ -18,14 +22,15 @@
 
 	{% for language in grav.language.languages %}
 		{% set page_url = base_url ~ "/" ~ language ~ page.route|e %}
+
 		<li>
 			<a href="{{ page_url ~ uri.params ~ (uri.query|length > 1 ? '?' ~ uri.query) }}" class="{{ active_page }}">
 				{% if format == 'long' %}
-					{{ native_name(language)|capitalize }}
+					{{ macros.lang_name(language) }}
 				{% elseif format == 'short' %}
 					{{ language|upper }}
 				{% elseif format == 'icon' %}
-					{{ macros.icon(language) }}
+					{{ macros.lang_icon(language) }}
 				{% endif %}
 			</a>
 		</li>
