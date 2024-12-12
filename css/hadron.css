@@ -217,8 +217,26 @@ section.modular-image-cards .image-cards .image-card.layout-right {
 section.modular-image-cards .image-cards .image-card .image-card-image, section.modular-image-cards .image-cards .image-card .image-card-content {
   width: 50%;
 }
-section.modular-image-cards .image-cards .image-card .image-card-image img, section.modular-image-cards .image-cards .image-card .image-card-content img {
+section.modular-image-cards .image-cards .image-card .image-card-image img {
   width: 100%;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.align-center {
+  align-self: center;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.align-start {
+  align-self: start;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.align-end {
+  align-self: end;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.text-center {
+  text-align: center;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.text-left {
+  text-align: left;
+}
+section.modular-image-cards .image-cards .image-card .image-card-content.text-right {
+  text-align: right;
 }
 section.modular-image-cards .image-cards .image-card h3 {
   margin-top: 0;

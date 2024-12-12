@@ -21,6 +21,9 @@ form:
                   options:
                     left: Links
                     right: Rechts
+                .content_css:
+                  type: text
+                  label: Inhalt CSS Klassen
                 .image:
                   type: mediapicker
                   label: Bild

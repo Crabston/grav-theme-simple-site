@@ -11,7 +11,7 @@
 						<img src="{{ card.image }}" alt="{{ card.title }}">
 					</div>
 
-					<div class="image-card-content">
+					<div class="image-card-content {{ card.content_css ?? '' }}">
 						<h3>{{ card.title }}</h3>
 						<p>{{ card.text }}</p>
 						<a href="{{ card.page }}" class="btn">{{ card.link_text }}</a>

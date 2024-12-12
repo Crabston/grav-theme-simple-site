@@ -12,8 +12,37 @@ section.modular-image-cards .image-cards {
 		.image-card-image, .image-card-content {
 			width: 50%;
 
+		}
+
+		.image-card-image {
 			img {
 				width: 100%;
+			}
+		}
+
+		.image-card-content {
+			&.align-center {
+				align-self: center;
+			}
+
+			&.align-start {
+				align-self: start;
+			}
+
+			&.align-end {
+				align-self: end;
+			}
+
+			&.text-center {
+				text-align: center;
+			}
+
+			&.text-left {
+				text-align: left;
+			}
+
+			&.text-right {
+				text-align: right;
 			}
 		}
 
