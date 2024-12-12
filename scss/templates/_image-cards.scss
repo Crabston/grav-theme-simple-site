@@ -1,0 +1,24 @@
+section.modular-image-cards .image-cards {
+	.image-card {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin: 3rem 0;
+
+		&.layout-right {
+			flex-direction: row-reverse;
+		}
+
+		.image-card-image, .image-card-content {
+			width: 50%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+	}
+}

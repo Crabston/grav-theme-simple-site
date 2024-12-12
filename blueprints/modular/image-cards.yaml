@@ -1,0 +1,38 @@
+title: Bild Karten
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: Bild Karten
+          fields:
+            header.cards:
+              type: list
+              label: Karten
+
+              fields:
+                .layout:
+                  type: select
+                  label: Layout
+                  default: left
+                  options:
+                    left: Links
+                    right: Rechts
+                .image:
+                  type: mediapicker
+                  label: Bild
+                .title:
+                  type: text
+                  label: Titel
+                .text:
+                  type: textarea
+                  label: Text
+                .page:
+                  type: pages
+                  label: Seite
+                .link_text:
+                  type: text
+                  label: Link Text

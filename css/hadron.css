@@ -205,6 +205,25 @@ table .text-align-left {
     text-align: right;
   }
 }
+section.modular-image-cards .image-cards .image-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+section.modular-image-cards .image-cards .image-card.layout-right {
+  flex-direction: row-reverse;
+}
+section.modular-image-cards .image-cards .image-card .image-card-image, section.modular-image-cards .image-cards .image-card .image-card-content {
+  width: 50%;
+}
+section.modular-image-cards .image-cards .image-card .image-card-image img, section.modular-image-cards .image-cards .image-card .image-card-content img {
+  width: 100%;
+}
+section.modular-image-cards .image-cards .image-card h3 {
+  margin-top: 0;
+}
+
 .overlay-dark .image-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }
