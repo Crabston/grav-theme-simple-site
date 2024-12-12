@@ -7,46 +7,46 @@ form:
       fields:
         features:
           type: tab
-          title: Bild Karten
+          title: TEMPLATE.MODULAR.IMAGE_CARDS.TITLE
           fields:
             header.cards:
               type: list
-              label: Karten
+              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LABEL
 
               fields:
                 .layout:
                   type: select
-                  label: Layout
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.LABEL
                   default: left
                   options:
-                    left: Links
-                    right: Rechts
+                    left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.LEFT
+                    right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.RIGHT
                 .alignment:
                   type: select
-                  label: Text Ausrichtung
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.LABEL
                   default: center-left
                   options:
-                    top-left: top-left
-                    top-center: top-center
-                    top-right: top-right
-                    center-left: center-left
-                    center-center: center-center
-                    center-right: center-right
-                    bottom-left: bottom-left
-                    bottom-center: bottom-center
-                    bottom-right: bottom-right
+                    top-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_LEFT
+                    top-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_CENTER
+                    top-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_RIGHT
+                    center-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_LEFT
+                    center-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_CENTER
+                    center-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_RIGHT
+                    bottom-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
+                    bottom-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
+                    bottom-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
                 .image:
                   type: mediapicker
-                  label: Bild
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.IMAGE.LABEL
                 .title:
                   type: text
-                  label: Titel
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.TITLE.LABEL
                 .text:
                   type: textarea
-                  label: Text
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.TEXT.LABEL
                 .page:
                   type: pages
-                  label: Seite
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.PAGE.LABEL
                 .link_text:
                   type: text
-                  label: Link Text
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LINK_TEXT.LABEL
