@@ -11,42 +11,25 @@ section.modular-image-cards .image-cards {
 
 		.image-card-image, .image-card-content {
 			width: 50%;
-
 		}
 
 		.image-card-image {
-			img {
-				width: 100%;
-			}
+			img { width: 100%; }
 		}
 
 		.image-card-content {
-			&.align-center {
-				align-self: center;
-			}
-
-			&.align-start {
-				align-self: start;
-			}
-
-			&.align-end {
-				align-self: end;
-			}
-
-			&.text-center {
-				text-align: center;
-			}
-
-			&.text-left {
-				text-align: left;
-			}
-
-			&.text-right {
-				text-align: right;
-			}
+			&.top-left { align-self: start; text-align: left; }
+			&.top-center { align-self: start; text-align: center; }
+			&.top-right { align-self: start; text-align: right; }
+			&.center-left { align-self: center; text-align: left; }
+			&.center-center { align-self: center; text-align: center; }
+			&.center-right { align-self: center; text-align: right; }
+			&.bottom-left { align-self: end; text-align: left; }
+			&.bottom-center { align-self: end; text-align: center; }
+			&.bottom-right { align-self: end; text-align: right; }
 		}
 
-		h3 {
+		h4 {
 			margin-top: 0;
 		}
 	}
