@@ -1,10 +1,13 @@
 # 2.0.1
 ##  _unreleased_
+1. [](#new)
+   - add Fontawesome Icons _(v6.7.2)_ (#20)
+   - add Image Card Template (#19)
 1. [](#bugfix)
-   - Fix reading time template missing
+   - Fix reading time template missing (#17)
    - Fix transparent navigation bug (#18)
 1. [](#improved)
-   - add translations for admin > pages > modals (navigation)
+   - add translations for admin > pages > modals (navigation) (#16)
 
 # 2.0.0
 ##  30-09-2024
