@@ -21,6 +21,10 @@ spectre:
   icons: false
 production-mode: true
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
+fontawesome:
+  solid: false
+  regular: false
+  brands: false
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 favicon:
   user/themes/hadron/images/favicon.svg:

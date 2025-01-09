@@ -241,6 +241,14 @@ THEME:
       TITLE: Menü
       DISPLAY_DROPDOWNS:
         LABEL: Zeige Dropdowns im Menü
+    FONTAWESOME:
+      TITLE: Fontawesome Icons
+      ENABLE_SOLID:
+        LABEL: Aktiviere Solid Icons
+      ENABLE_REGULAR:
+        LABEL: Aktiviere Regular Icons
+      ENABLE_BRAND:
+        LABEL: Aktiviere Brands Icons
   QUARK:
     TITLE: Quark Optionen
     PRODUCTION_MODE:

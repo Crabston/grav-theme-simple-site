@@ -22,6 +22,15 @@
 {% endblock head %}
 
 {% block stylesheets %}
+	{% set enable_fa_solid = theme.fontawesome.solid %}
+	{% set enable_fa_regular = theme.fontawesome.regular %}
+	{% set enable_fa_brand = theme.fontawesome.brand %}
+	{% if (enable_fa_solid or enable_fa_regular or enable_fa_brand) %}
+		{% set enable_fa = true %}
+	{% else %}
+		{% set enable_fa = false %}
+	{% endif %}
+
 	{% do assets.addCss('theme://css-compiled/spectre'~compress) %}
 	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress) %}{% endif %}
 	{% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
@@ -29,11 +38,15 @@
 	{% do assets.addCss('theme://css/theme.css',100) %}
 	{% do assets.addCss('theme://css/hadron.css') %}
 	{% do assets.addCss('theme://css/custom.css') %}
-	{% do assets.addCss('theme://css/line-awesome.min.css') %}
-	{% do assets.addCss('theme://css/fontawesome.min.css') %}
-	{% do assets.addCss('theme://css/fontawesome-solid.min.css') %}
-	{% do assets.addCss('theme://css/fontawesome-brands.min.css') %}
-	{% do assets.addCss('theme://css/fontawesome-regular.min.css') %}
+
+	{% if not enable_fa %}
+		{% do assets.addCss('theme://css/line-awesome.min.css') %}
+	{% else %}
+		{% do assets.addCss('theme://css/fontawesome.min.css') %}
+	{% endif %}
+	{% if enable_fa_solid %}    {% do assets.addCss('theme://css/fontawesome-solid.min.css') %}     {% endif %}
+	{% if enable_fa_regular %}  {% do assets.addCss('theme://css/fontawesome-regular.min.css') %}   {% endif %}
+	{% if enable_fa_brand %}    {% do assets.addCss('theme://css/fontawesome-brands.min.css') %}    {% endif %}
 {% endblock %}
 
 {% block javascripts %}
@@ -44,13 +57,13 @@
 {% endblock %}
 
 {% block footer %}
-    <section id="footer" class="section bg-gray">
-        <section class="container {{ grid_size }}">
-	        {# display footer markdown page #}
-	        {% set content = pages.find('/footer').content %}
-	        {% if content %}
-		        {{ content|raw }}
-	        {% endif %}
-        </section>
-    </section>
+	<section id="footer" class="section bg-gray">
+		<section class="container {{ grid_size }}">
+			{# display footer markdown page #}
+			{% set content = pages.find('/footer').content %}
+			{% if content %}
+				{{ content|raw }}
+			{% endif %}
+		</section>
+	</section>
 {% endblock %}
