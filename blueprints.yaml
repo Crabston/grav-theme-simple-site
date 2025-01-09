@@ -57,6 +57,40 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
               validate:
                 type: bool
+            fontawesome:
+              type: section
+              title: THEME.HADRON.FONTAWESOME.TITLE
+              underline: true
+            fontawesome.solid:
+              type: toggle
+              label: THEME.HADRON.FONTAWESOME.ENABLE_SOLID.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            fontawesome.regular:
+              type: toggle
+              label: THEME.HADRON.FONTAWESOME.ENABLE_REGULAR.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            fontawesome.brand:
+              type: toggle
+              label: THEME.HADRON.FONTAWESOME.ENABLE_BRAND.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
         quark:
           type: tab
           title: THEME.QUARK.TITLE
