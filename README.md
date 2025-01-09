@@ -15,6 +15,7 @@ _Learn more about all the features of Hadron in detail on [tutorials.crabston.ch
 - Featured posts for blog
 - Built-in Support for Embed.ly
 - Built-in Support for H5P
+- Newest Fontawesome Icons (v6.7.2)
 - more theme customization options
 - other enhancements
 
@@ -74,6 +75,7 @@ header-dark: false          # Inverts the text/logo to work better on dark backg
 header-transparent: false   # Allows the fixed header to be transparent over the page
 sticky-footer: true         # Causes the footer to be sticky at the bottom of the page
 production-mode: true       # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
+fontawesome:                # Customize the use of fontawesome icons
 favicon:                    # A custom favicon rather than the theme default (see below for more information)
 custom_logo:                # A custom logo (see below)
 custom_logo_mobile:         # A custom logo for mobile devices (see below)
@@ -82,6 +84,17 @@ custom_logo_mobile:         # A custom logo for mobile devices (see below)
 To make modifications, you can copy the `user/themes/hadron/hadron.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/hadron/hadron.yaml` file directly or your changes will be lost with any updates
+
+### Fontawesome Icons
+You can customize the use of Fontawesome icons by setting the `fontawesome` option in the theme configuration file. The options are:
+
+```yaml
+fontawesome:
+  solid: false    # Enable solid icons
+  regular: false  # Enable regular icons
+  brand: false    # Enable brand icons
+```
+If you activate an icon set, the built-in Quark icons (forkawesome) get deactivated. You can enable multiple icons sets at the same time.
 
 ### Custom Favicon & Logos
 To add a custom favicon/ logo, you should put the favicon/ logo into the `user/themes/hadron/images/logo` folder. Standard image formats are supported (.png, .jpg, .gif, .svg, etc.). Then reference the logo via the YAML like so:
