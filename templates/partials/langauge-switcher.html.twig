@@ -20,7 +20,7 @@
 	{% import _self as macros %}
 
 	{% if display=='dropdown' %}
-		<li><a href="#">🌐 Sprache</a><ul>
+		<li><a href="#">{{ 'LANGUAGE.LANGUAGE'|tl }}</a><ul>
 	{% endif %}
 
 	{% for language in grav.language.languages %}
