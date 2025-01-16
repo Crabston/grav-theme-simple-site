@@ -71,7 +71,7 @@
 					    {% endblock %}
 				    </nav>
 
-				    <nav class="language-switcher">
+				    <nav class="dropmenu language-switcher">
 					    {% block language_switcher %}
 						    {% include 'partials/langauge-switcher.html.twig' %}
 					    {% endblock %}
@@ -104,4 +104,20 @@
 			{% endif %}
 		</section>
 	</section>
+{% endblock %}
+
+{% block mobile %}
+    <div class="mobile-container">
+	    <div class="overlay" id="overlay">
+		    <div class="mobile-logo">
+			    {% include 'partials/logo.html.twig' with {mobile: true} %}
+		    </div>
+		    <nav class="language-switcher">
+			    {% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
+		    </nav>
+		    <nav class="overlay-menu">
+			    {% include 'partials/navigation.html.twig' with {tree: true} %}
+		    </nav>
+	    </div>
+    </div>
 {% endblock %}

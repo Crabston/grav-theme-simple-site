@@ -1,9 +1,12 @@
+{# TODO: add default config #}
 {% set display = display ?? config.get('plugins.langswitcher.display', 'dropdown') %} {# inline, dropdown #}
-{% set format = format ?? config.get('plugins.langswitcher.language_display', 'short') %} {# long, short, icon #}
+{% set format = format ?? config.get('plugins.langswitcher.language_display', 'short') %} {# long, short, icon, combined #}
+{% set enabled = enabled ?? config.get('plugins.langswitcher.enabled', false) %}
 
 {# TODO: remove #}
 {% set display = 'dropdown' %}
-{% set format = 'icon' %}
+{% set format = 'combined' %}
+{% set enabled = true %}
 
 {% macro lang_name(language) %}
 	{{ 'LANGUAGE.NAME'|tl([language]) }}
@@ -17,11 +20,12 @@
 	{% import _self as macros %}
 
 	{% if display=='dropdown' %}
-		<li><a href="#">Sprache</a><ul>
+		<li><a href="#">🌐 Sprache</a><ul>
 	{% endif %}
 
 	{% for language in grav.language.languages %}
 		{% set page_url = base_url ~ "/" ~ language ~ page.route|e %}
+		{% set active_page = (page.language == language) ? 'active' : '' %}
 
 		<li>
 			<a href="{{ page_url ~ uri.params ~ (uri.query|length > 1 ? '?' ~ uri.query) }}" class="{{ active_page }}">
@@ -31,6 +35,8 @@
 					{{ language|upper }}
 				{% elseif format == 'icon' %}
 					{{ macros.lang_icon(language) }}
+				{% elseif format == 'combined' %}
+					{{ macros.lang_icon(language) }} {{ macros.lang_name(language) }}
 				{% endif %}
 			</a>
 		</li>
@@ -41,9 +47,16 @@
 	{% endif %}
 {% endmacro %}
 
-<nav {{ display=='dropdown' ? 'class="dropmenu animated"' : '' }}>
+{% if enabled and not mobile %}
 	<ul>
 		{% import _self as macros %}
 		{{ macros.lang_switcher(page, display, format) }}
 	</ul>
-</nav>
+{% endif %}
+
+{% if enabled and mobile %}
+	<ul {{ tree ? 'class="tree"' : '' }}>
+		{% import _self as macros %}
+		{{ macros.lang_switcher(page, 'mobile', format) }}
+	</ul>
+{% endif %}
