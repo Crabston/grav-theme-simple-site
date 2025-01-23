@@ -1,5 +1,5 @@
 # 2.0.1
-##  _unreleased_
+## 23-01-2025
 1. [](#new)
    - Add multi-language support (#21)
    - add Fontawesome Icons _(v6.7.2)_ (#20)
