@@ -15,6 +15,7 @@ _Learn more about all the features of Hadron in detail on [tutorials.crabston.ch
 - Featured posts for blog
 - Built-in Support for Embed.ly
 - Built-in Support for H5P
+- Built-in multilanguage support
 - Newest Fontawesome Icons (v6.7.2)
 - more theme customization options
 - other enhancements

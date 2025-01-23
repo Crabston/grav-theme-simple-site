@@ -1,0 +1,38 @@
+nav.language-switcher {
+	margin-left: 1rem;
+
+	ul {
+		display: flex;
+		gap: .5rem
+	}
+
+	li {
+		margin-top: 0;
+
+		&::marker {
+			content: none;
+		}
+	}
+
+	a {
+		&.active {
+			color: $primary-color;
+		}
+	}
+
+	> ul > li > a {
+		padding: .25rem !important;
+	}
+
+	.mobile-container & {
+		font-size: 1rem;
+		margin-top: 2rem;
+
+		a {
+			&:not(.active) { color: $text-color-secondary; }
+
+			&.active { text-decoration: none; }
+		}
+	}
+}
+

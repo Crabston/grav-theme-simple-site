@@ -280,6 +280,20 @@ section.modular-image-cards .image-cards .image-card h4 {
   padding: 1rem;
 }
 
+nav.language-switcher nav:not(.dropmenu) li {
+  font-size: 16px;
+}
+nav.language-switcher ul {
+  display: flex;
+  gap: 0.5rem;
+}
+nav.language-switcher li {
+  margin-top: 0;
+}
+nav.language-switcher li::marker {
+  content: none;
+}
+
 * {
   box-sizing: border-box;
 }

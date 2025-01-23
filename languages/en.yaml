@@ -1,3 +1,9 @@
+LANGUAGE:
+  LANGUAGE: 🌐 Language
+  NAME: English
+  SLUG: en
+  ICON: 🇬🇧
+
 TEMPLATE:
   DEFAULT:
     BODY_CLASSES:
