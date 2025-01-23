@@ -1,6 +1,7 @@
 # 2.0.1
 ##  _unreleased_
 1. [](#new)
+   - Add multi-language support (#21)
    - add Fontawesome Icons _(v6.7.2)_ (#20)
    - add Image Card Template (#19)
 1. [](#bugfix)
