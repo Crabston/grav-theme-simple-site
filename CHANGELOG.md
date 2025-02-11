@@ -1,3 +1,10 @@
+# 2.0.2
+## 11-02-2025
+1. [](#bugfix)
+   - fix language switcher enabled by default
+1. [](#improved)
+   - add option to configure language switcher
+
 # 2.0.1
 ## 23-01-2025
 1. [](#new)
