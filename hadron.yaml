@@ -25,6 +25,10 @@ fontawesome:
   solid: false
   regular: false
   brands: false
+langswitcher:
+  enable: false
+  display: dropdown
+  format: combined
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 favicon:
   user/themes/hadron/images/favicon.svg:

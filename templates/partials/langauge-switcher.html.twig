@@ -1,12 +1,6 @@
-{# TODO: add default config #}
-{% set display = display ?? config.get('plugins.langswitcher.display', 'dropdown') %} {# inline, dropdown #}
-{% set format = format ?? config.get('plugins.langswitcher.language_display', 'short') %} {# long, short, icon, combined #}
-{% set enabled = enabled ?? config.get('plugins.langswitcher.enabled', false) %}
-
-{# TODO: remove #}
-{% set display = 'dropdown' %}
-{% set format = 'combined' %}
-{% set enabled = true %}
+{% set enabled = enabled ?? config.get('theme.langswitcher.enable', false) %}
+{% set display = display ?? config.get('theme.langswitcher.display', 'dropdown') %}
+{% set format = format ?? config.get('theme.langswitcher.format', 'combined') %}
 
 {% macro lang_name(language) %}
 	{{ 'LANGUAGE.NAME'|tl([language]) }}

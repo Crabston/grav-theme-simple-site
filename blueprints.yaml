@@ -91,6 +91,38 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
               validate:
                 type: bool
+            langswitcher:
+              type: section
+              title: THEME.HADRON.LANGSWITCHER.TITLE
+              underline: true
+            langswitcher.enable:
+              type: toggle
+              label: THEME.HADRON.LANGSWITCHER.ENABLE.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            langswitcher.display:
+              type: select
+              size: small
+              label: THEME.HADRON.LANGSWITCHER.DISPLAY.LABEL
+              default: dropdown
+              options:
+                dropdown: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.DROPDOWN
+                inline: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.INLINE
+            langswitcher.format:
+              type: select
+              size: small
+              label: THEME.HADRON.LANGSWITCHER.FORMAT.LABEL
+              default: combined
+              options:
+                combined: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.COMBINED
+                short: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.SHORT
+                long: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.LONG
+                icon: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.ICON
         quark:
           type: tab
           title: THEME.QUARK.TITLE

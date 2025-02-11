@@ -255,6 +255,22 @@ THEME:
         LABEL: Enable Regular Icons
       ENABLE_BRAND:
         LABEL: Enable Brands Icons
+    LANGSWITCHER:
+      TITLE: Language Switcher
+      ENABLE:
+        LABEL: Enable Language Switcher
+      DISPLAY:
+        LABEL: Display style
+        OPTIONS:
+          DROPDOWN: Dropdown
+          INLINE: Inline
+      FORMAT:
+        LABEL: Format
+        OPTIONS:
+          COMBINED: Combined
+          SHORT: Shortcode
+          LONG: Name
+          ICON: Flag
   QUARK:
     TITLE: Quark Options
     PRODUCTION_MODE:
